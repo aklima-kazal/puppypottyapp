@@ -4,6 +4,7 @@ import { fatchAirPollution, fatchWeatherByCity } from "./utils/fatchWeather";
 import CityClock from "./globalComponents/CityClock";
 import WeatherCard from "./globalComponents/WeatherCard";
 import AirQuality from "./globalComponents/AirQuality";
+import axios from "axios";
 
 function App() {
   const [country, setCountry] = useState("Bangladesh");

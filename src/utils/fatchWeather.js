@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fatchWeatherByCity = async (city) => {
   const res = await axios.get(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
       import.meta.env.VITE_API_KEY
     }&units=metric`
   );
@@ -10,7 +10,7 @@ export const fatchWeatherByCity = async (city) => {
 };
 export const fatchAirPollution = async (lat, lon) => {
   const res = await axios.get(
-    `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${
+    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${
       import.meta.env.VITE_API_KEY
     }`
   );
