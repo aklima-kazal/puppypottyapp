@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../../assets/svg/logo.svg";
+import Logo from "../../../assets/svg/Logo.svg";
 import { LinkList } from "./LinkList";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
