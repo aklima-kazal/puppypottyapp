@@ -1,4 +1,4 @@
-import Screenshoot01 from "@/assets/images/Screenshoot01.png";
+import Screenshoot01 from "@/assets/images/screenshoot01.png";
 import Screenshoot02 from "@/assets/images/Screenshoot02.png";
 import Screenshoot03 from "@/assets/images/Screenshoot03.png";
 
