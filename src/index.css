@@ -127,6 +127,8 @@
   --color-nav: #333333;
   --color-black01: #1e1e1e;
   --color-black02: #000000;
+  --color-gray: #9e9e9e;
+  --color-gray01: #e2e2e2;
 }
 @utility container {
   max-width: 1170px;

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Rootlayouts from "./Layouts/Rootlayouts";
 import Home from "./pages/Home";
+import "swiper/css";
 
 function App() {
   const router = createBrowserRouter(
