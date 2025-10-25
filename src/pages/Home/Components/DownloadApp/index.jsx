@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import GlobalContainer from "@/globalComponents/GlobalContainer";
 import Plystore from "@/assets/images/app-store.svg";
 import Appstore from "@/assets/images/google-play.svg";
-import PhoneImg1 from "@/assets/images/iphone1.png";
-import PhoneImg2 from "@/assets/images/iphone2.png";
+import PhoneImg1 from "@/assets/images/iPhone1.png";
+import PhoneImg2 from "@/assets/images/iPhone2.png";
 import { easeInOut, motion, useAnimation } from "motion/react";
 import React, { useEffect } from "react";
 
