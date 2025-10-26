@@ -7,6 +7,7 @@ import Products from "./Components/Products";
 import Features from "./Components/Features";
 import Screenshoots from "./Components/Screenshoots";
 import Testimonials from "./Components/Testimonials";
+import CallToAction from "./Components/CTA";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Features />
       <Screenshoots />
       <Testimonials />
+      <CallToAction />
     </>
   );
 };

@@ -10,13 +10,24 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import PrevArrow from "./PrevArrow";
 import NextArrow from "./NextArrow";
+import { motion } from "motion/react";
 
 const Products = () => {
   const swiperRef = useRef(null);
   return (
     <>
-      <section className="mt-[170px] mb-[100px]">
-        <GlobalContainer>
+      <GlobalContainer>
+        <motion.section
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            staggerChildren: 0.2,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="mt-[170px] mb-[100px]"
+        >
           <div className="text-center mx-auto">
             <h5 className="font-manjari font-normal text-2xl text-black01">
               Supplies
@@ -56,8 +67,8 @@ const Products = () => {
               <NextArrow onClick={() => swiperRef.current?.slideNext()} />
             </div>
           </div>
-        </GlobalContainer>
-      </section>
+        </motion.section>
+      </GlobalContainer>
     </>
   );
 };

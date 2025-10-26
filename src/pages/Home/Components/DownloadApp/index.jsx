@@ -51,7 +51,16 @@ const DownloadApp = () => {
       <GlobalContainer>
         <section className="mt-[130px]">
           <div className="grid grid-cols-2 gap-x-[100px]">
-            <div>
+            <motion.div
+              initial={{ x: -60, opacity: 0 }}
+              whileInView={{ x: -0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                staggerChildren: 0.2,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+            >
               <h5 className="text-[55px] font-medium font-poppins mb-[17px]">
                 One Mobile App For Your Lovely Pet
               </h5>
@@ -74,7 +83,7 @@ const DownloadApp = () => {
                   <img src={Plystore} alt="" className="w-[106px] h-[28px]" />
                 </Button>
               </div>
-            </div>
+            </motion.div>
             <motion.div
               className=" relative"
               initial="hidden"

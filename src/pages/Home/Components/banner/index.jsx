@@ -2,12 +2,23 @@ import React from "react";
 import BannerImg from "@/assets/images/Banner.png";
 import GlobalContainer from "@/globalComponents/GlobalContainer";
 import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
 
 const Banner = () => {
   return (
     <>
       <GlobalContainer>
-        <div className="grid grid-cols-2 items-center justify-between">
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            staggerChildren: 0.2,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
+          className="grid grid-cols-2 items-center justify-between"
+        >
           <div className="">
             <h1 className="font-manjari text-[70px] leading-24 font-bold text-banner mb-[28px] w-[110%]">
               Potty train your pup the easy way
@@ -26,7 +37,7 @@ const Banner = () => {
           <div>
             <img src={BannerImg} alt="" />
           </div>
-        </div>
+        </motion.div>
       </GlobalContainer>
     </>
   );
