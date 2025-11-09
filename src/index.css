@@ -129,11 +129,67 @@
   --color-black02: #000000;
   --color-gray: #9e9e9e;
   --color-gray01: #e2e2e2;
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
 }
 @utility container {
   max-width: 1170px;
   margin: 0 auto;
 }
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+    padding: 0 15px;
+  }
+}
 body {
   background-color: #f9f9f9;
+}
+.StickyNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding-bottom: 2px;
+  animation: stickyNavAnimation 0.5s ease-in-out forwards;
+}
+@keyframes stickyNavAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

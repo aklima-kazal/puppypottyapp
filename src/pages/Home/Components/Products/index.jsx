@@ -17,26 +17,36 @@ const Products = () => {
   return (
     <>
       <GlobalContainer>
-        <motion.section
-          initial={{ y: 60, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            staggerChildren: 0.2,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="mt-[170px] mb-[100px]"
-        >
-          <div className="text-center mx-auto">
+        <section className="mt-[170px] mb-[100px]">
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              staggerChildren: 0.2,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="text-center mx-auto"
+          >
             <h5 className="font-manjari font-normal text-2xl text-black01">
               Supplies
             </h5>
             <p className="font-poppins font-semibold text-3xl text-black02 mt-[9px] mb-[73px]">
               Pick Our Products
             </p>
-          </div>
-          <div className="relative ">
+          </motion.div>
+          <motion.div
+            initial={{ y: -60, opacity: 0 }}
+            whileInView={{ y: -0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              staggerChildren: 0.2,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative "
+          >
             <div className="absolute left-[-70px] top-1/2 z-999 -translate-y-[50%]">
               <PrevArrow onClick={() => swiperRef.current?.slidePrev()} />
             </div>
@@ -54,6 +64,24 @@ const Products = () => {
                 clickable: true,
               }}
               navigation={false}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                576: {
+                  slidesPerView: 1,
+                  spaceBetween: 40,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 50,
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+              }}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
             >
@@ -66,8 +94,8 @@ const Products = () => {
             <div className="absolute right-[-70px] top-1/2 z-111 -translate-y-[50%]">
               <NextArrow onClick={() => swiperRef.current?.slideNext()} />
             </div>
-          </div>
-        </motion.section>
+          </motion.div>
+        </section>
       </GlobalContainer>
     </>
   );

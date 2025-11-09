@@ -49,8 +49,8 @@ const DownloadApp = () => {
   return (
     <>
       <GlobalContainer>
-        <section className="mt-[130px]">
-          <div className="grid grid-cols-2 gap-x-[100px]">
+        <section className="mt-[60px] md:mt-[130px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px]">
             <motion.div
               initial={{ x: -60, opacity: 0 }}
               whileInView={{ x: -0, opacity: 1 }}
@@ -61,10 +61,10 @@ const DownloadApp = () => {
                 ease: "easeInOut",
               }}
             >
-              <h5 className="text-[55px] font-medium font-poppins mb-[17px]">
+              <h5 className="text-[28px] md:text-[55px] font-medium font-poppins mb-[17px] text-center md:text-left">
                 One Mobile App For Your Lovely Pet
               </h5>
-              <p className="font-normal font-poppins text-[19px] text-black w-[103%]">
+              <p className="font-normal font-poppins text-[16px] md:text-[19px] text-black w-full md:w-[103%] text-center md:text-left">
                 Lorem ipsum dolor sit amet consectetur. Magna dictumst mattis
                 tempus ac dignissim ultricies. Sodales tellus egestas ac viverra
                 mauris enim bibendum commodo aliquam. Elementum et est semper
@@ -75,8 +75,8 @@ const DownloadApp = () => {
                 Download The App
               </h6>
 
-              <div className="flex gap-4 mt-[50px] ">
-                <Button className="bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
+              <div className="md:flex gap-4 mt-[50px] mb-[50px] md:mb-0 text-center md:text-left">
+                <Button className="mb-4 bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
                   <img src={Appstore} alt="" className="w-[140px] h-[27px]" />
                 </Button>
                 <Button className="bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">

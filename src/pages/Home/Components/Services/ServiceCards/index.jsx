@@ -4,7 +4,7 @@ const ServiceCards = ({ icon, title, description }) => {
   const Icon = icon;
   return (
     <>
-      <div className="bg-white group hover:bg-primary transition-all ease-in duration-300 mt-[177px] border border-[rgba(0,0,0,0.08)] hover:border-primary rounded-[10px] p-[20px] text-center shadow-slate-200 shadow-2xl">
+      <div className="bg-white group hover:bg-primary transition-all ease-in duration-300 mt-20 md:mt-[177px] border border-[rgba(0,0,0,0.08)] hover:border-primary rounded-[10px] p-[20px] text-center shadow-slate-200 shadow-2xl">
         <div className="mt-[54px] mb-[34px] bg-primary group-hover:bg-white text-white group-hover:text-primary rounded-full w-[95px] h-[95px] flex items-center justify-center mx-auto transition-all ease-in duration-300">
           <Icon />
         </div>

@@ -9,15 +9,14 @@ const Services = () => {
     <>
       <GlobalContainer>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{
-            staggerChildren: 0.2,
-            duration: 0.7,
-            ease: "easeInOut",
+            duration: 0.5,
+            ease: "easeIn",
           }}
-          className="grid grid-cols-3 gap-x-[30px] "
+          className="grid grid-cols-1 md:grid-cols-3 gap-x-[30px] "
         >
           {ServiceData?.map((item, index) => (
             <ServiceCards
