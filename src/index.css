@@ -135,6 +135,8 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --breakpoint-xxl: 1400px;
+  --breakpoint-xxxl: 1600px;
+  --breakpoint-xxxxl: 1920px;
 }
 @utility container {
   max-width: 1170px;
@@ -164,12 +166,19 @@
     padding: 0 15px;
   }
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container {
     max-width: 1170px;
     padding: 0 15px;
   }
 }
+@media (max-width: 1920px) {
+  .container {
+    max-width: 1090px;
+    padding: 0px 30px;
+  }
+}
+
 body {
   background-color: #f9f9f9;
 }
@@ -181,7 +190,9 @@ body {
   z-index: 50;
   background-color: #f9f9f9;
   transition: all 0.3s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding-bottom: 2px;
   animation: stickyNavAnimation 0.5s ease-in-out forwards;
 }

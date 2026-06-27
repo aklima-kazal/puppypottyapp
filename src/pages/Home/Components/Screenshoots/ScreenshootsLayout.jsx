@@ -7,7 +7,12 @@ const ScreenshootsLayout = () => {
       <div className="grid grid-cols-3">
         {ScreenshootsData?.map((item) => (
           <div className="flex items-center justify-center gap-x-[19px] mb-[71px] ">
-            <img src={item.img} alt="screenshoot image" />
+            <img
+              src={item.img}
+              width="95%"
+              height="95%"
+              alt="screenshoot image"
+            />
           </div>
         ))}
       </div>

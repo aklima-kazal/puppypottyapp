@@ -47,7 +47,7 @@ const Products = () => {
             }}
             className="relative "
           >
-            <div className="absolute left-[-70px] top-1/2 z-999 -translate-y-[50%]">
+            <div className="absolute left-[-55px] top-1/2 z-999 -translate-y-[50%]">
               <PrevArrow onClick={() => swiperRef.current?.slidePrev()} />
             </div>
             <Swiper
@@ -91,7 +91,7 @@ const Products = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="absolute right-[-70px] top-1/2 z-111 -translate-y-[50%]">
+            <div className="absolute right-[-55px] top-1/2 z-111 -translate-y-[50%]">
               <NextArrow onClick={() => swiperRef.current?.slideNext()} />
             </div>
           </motion.div>
