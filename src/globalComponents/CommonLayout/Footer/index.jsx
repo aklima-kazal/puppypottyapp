@@ -11,13 +11,13 @@ const Footer = () => {
   return (
     <>
       <GlobalContainer>
-        <div className="grid grid-cols-[34%_20%_25%] mt-[168px] mb-[30px] gap-x-[80px] mx-auto border-b border-[#E5E5E5]">
+        <div className="grid grid-cols-1 md:grid-cols-[34%_20%_25%] mt-[168px] mb-[30px] gap-x-[80px] mx-auto border-b border-[#E5E5E5]">
           <div>
             <div className="w-[50%]">
               <img src={Logo} alt="logo" />
             </div>
 
-            <p className="font-poppins font-normal text-[18px] text-nav mt-[20px]">
+            <p className="font-poppins font-normal text-[17px] md:text-[18px] text-nav mt-[20px] mb-[50px] md:mb-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitationt.
@@ -46,12 +46,20 @@ const Footer = () => {
               Available on Google Play and App Store.
             </p>
 
-            <div className="flex gap-x-4 mt-[50px] ">
-              <Button className="bg-white px-[20px] py-[24px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
-                <img src={Appstore} alt="" className="w-[140px] h-[27px]" />
+            <div className="flex gap-x-4 mt-[50px] md:mb-0 mb-4">
+              <Button className="bg-white md:px-[20px] md:py-[24px] px-[15px] py-[20px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
+                <img
+                  src={Appstore}
+                  alt=""
+                  className="md:w-[140px] md:h-[27px] w-[100px] h-[28px]"
+                />
               </Button>
-              <Button className="bg-white px-[20px] py-[24px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
-                <img src={Plystore} alt="" className="w-[106px] h-[28px]" />
+              <Button className="bg-white md:px-[20px] md:py-[24px] px-[15px] py-[20px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
+                <img
+                  src={Plystore}
+                  alt=""
+                  className="md:w-[140px] md:h-[27px] w-[100px] h-[28px]"
+                />
               </Button>
             </div>
           </div>

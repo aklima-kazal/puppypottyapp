@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const FeatureLayout = () => {
   return (
     <>
-      <div className="grid grid-cols-3 items-center mt-[80px] mb-[100px] gap-x-8">
+      <div className="grid grid-cols-1 md:grid md:grid-cols-3 items-center mt-[80px] mb-2 md:mb-[100px] gap-x-8">
         <motion.div
           initial={{ x: -60, opacity: 0 }}
           whileInView={{ x: -0, opacity: 1 }}
@@ -31,6 +31,11 @@ const FeatureLayout = () => {
             </div>
           ))}
         </motion.div>
+        <img
+          src={FeaturePhone}
+          alt="feature phone"
+          className="md:hidden block mb-12"
+        />
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -40,9 +45,13 @@ const FeatureLayout = () => {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="flex justify-center"
+          className="flex justify-center "
         >
-          <img src={FeaturePhone} alt="feature phone" />
+          <img
+            src={FeaturePhone}
+            alt="feature phone"
+            className="hidden md:block "
+          />
         </motion.div>
         <motion.div
           initial={{ x: 60, opacity: 0 }}

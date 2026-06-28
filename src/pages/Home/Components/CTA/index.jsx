@@ -9,7 +9,7 @@ const CallToAction = () => {
     <>
       <GlobalContainer>
         <section className=" mt-[100px]">
-          <div className="grid grid-cols-[auto_auto] gap-x-12">
+          <div className="grid grid-cols-1 md:grid md:grid-cols-[auto_auto] gap-x-12">
             <motion.div
               initial={{ y: -60, opacity: 0 }}
               whileInView={{ y: -0, opacity: 1 }}
@@ -21,18 +21,18 @@ const CallToAction = () => {
               }}
               className=""
             >
-              <h5 className="font-medium font-poppins text-[55px] text-nav mb-10">
+              <h5 className="font-medium font-poppins text-[34px] md:text-[55px] text-nav mb-10">
                 Download Our Tracking Sheet
               </h5>
-              <span className="font-poppins text-3xl font-medium text-nav">
+              <span className="font-poppins text-[25px] md:text-3xl font-medium text-nav">
                 Train Your Pup :
               </span>
-              <p className="mt-[25px] font-poppins text-2xl font-normal text-banner">
+              <p className="mt-[25px] font-poppins text-[16px] md:text-2xl font-normal text-banner">
                 Log your dog’s pees, poops and meals and Puppy Potty Log will
                 use the data to create a custom housetraining schedule unique to
                 your fur baby.
               </p>
-              <div className="mt-[75px]">
+              <div className="mt-[25px] md:mt-[75px]">
                 <Button>Download Now</Button>
               </div>
             </motion.div>

@@ -17,7 +17,7 @@ const Products = () => {
   return (
     <>
       <GlobalContainer>
-        <section className="mt-[170px] mb-[100px]">
+        <section className="mt-[120px] mb-[100px]">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -32,7 +32,7 @@ const Products = () => {
             <h5 className="font-manjari font-normal text-2xl text-black01">
               Supplies
             </h5>
-            <p className="font-poppins font-semibold text-3xl text-black02 mt-[9px] mb-[73px]">
+            <p className="font-poppins font-semibold text-5xl text-black02 mt-[9px] mb-[73px]">
               Pick Our Products
             </p>
           </motion.div>
@@ -47,7 +47,7 @@ const Products = () => {
             }}
             className="relative "
           >
-            <div className="absolute left-[-55px] top-1/2 z-999 -translate-y-[50%]">
+            <div className="absolute left-[-55px] top-1/2 z-999 -translate-y-[50%] hidden md:block">
               <PrevArrow onClick={() => swiperRef.current?.slidePrev()} />
             </div>
             <Swiper
@@ -91,7 +91,7 @@ const Products = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="absolute right-[-55px] top-1/2 z-111 -translate-y-[50%]">
+            <div className="absolute right-[-55px] top-1/2 z-111 -translate-y-[50%] hidden md:block">
               <NextArrow onClick={() => swiperRef.current?.slideNext()} />
             </div>
           </motion.div>

@@ -26,6 +26,44 @@ const TestimonialSlider = () => {
             pagination={{
               clickable: true,
             }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              576: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              992: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1200: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              1400: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              1600: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              1800: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              1920: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+            }}
             navigation={false}
             Autoplay={true}
           >

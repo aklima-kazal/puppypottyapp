@@ -50,7 +50,7 @@ const DownloadApp = () => {
     <>
       <GlobalContainer>
         <section className="mt-[60px] md:mt-[130px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] ">
             <motion.div
               initial={{ x: -60, opacity: 0 }}
               whileInView={{ x: -0, opacity: 1 }}
@@ -71,11 +71,11 @@ const DownloadApp = () => {
                 faucibus imperdiet urna at sagittis. Nunc sit pellentesque in
                 odio ultrices volutpat nunc nec lacus. Sed orci faucibus.
               </p>
-              <h6 className="mt-16 font-poppins font-semibold text-[30px] text-nav">
+              <h6 className="mt-16 font-poppins font-semibold text-[26px] md:text-[30px] text-nav">
                 Download The App
               </h6>
 
-              <div className="md:flex gap-4 mt-[50px] mb-[50px] md:mb-0 text-center md:text-left">
+              <div className="md:flex gap-4 mt-[50px] mb-0 text-center md:text-left">
                 <Button className="mb-4 bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
                   <img src={Appstore} alt="" className="w-[140px] h-[27px]" />
                 </Button>
@@ -103,7 +103,7 @@ const DownloadApp = () => {
                   stiffness: 500,
                 }}
               >
-                <img src={PhoneImg2} alt="" />
+                <img src={PhoneImg2} alt="" className="hidden xl:block" />
               </motion.div>
 
               <motion.div
@@ -114,7 +114,7 @@ const DownloadApp = () => {
                   stiffness: 500,
                 }}
               >
-                <img src={PhoneImg1} alt="" />
+                <img src={PhoneImg1} alt="" className="hidden xl:block" />
               </motion.div>
             </motion.div>
           </div>
