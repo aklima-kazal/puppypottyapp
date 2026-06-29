@@ -4,9 +4,12 @@ import { LinkList } from "./LinkList";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import GlobalContainer from "@/globalComponents/GlobalContainer";
+import { FaHamburger } from "react-icons/fa";
+import Sidebar from "@/globalComponents/Sidebar";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
   useEffect(() => {
     const stickyNav = () => {
       if (window.scrollY > 0) {
@@ -24,9 +27,16 @@ const Header = () => {
     <>
       <nav className={nav ? "StickyNavbar" : ""}>
         <GlobalContainer>
-          <div className="flex items-center mx-auto pt-[8px] ">
+          <div className="flex items-center justify-between md:justify-normal mx-auto pt-[8px] ">
             <div className="w-[40%] md:w-[20%] overflow-hidden">
               <img src={Logo} alt="logo" className="" />
+            </div>
+            <div
+              className=" md:hidden text-center cursor-pointer mr-2"
+              role="button"
+              onClick={() => setShowSidebar(true)}
+            >
+              <FaHamburger size={25} />
             </div>
             <div className="w-[60%] hidden md:block">
               <ul className="flex justify-center gap-x-[30px]">
@@ -50,6 +60,9 @@ const Header = () => {
             </div>
           </div>
         </GlobalContainer>
+        <div>
+          <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        </div>
       </nav>
     </>
   );

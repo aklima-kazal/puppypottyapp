@@ -50,32 +50,115 @@ const DownloadApp = () => {
     <>
       <GlobalContainer>
         <section className="mt-[60px] md:mt-[130px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] ">
-            <motion.div
-              initial={{ x: -60, opacity: 0 }}
-              whileInView={{ x: -0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                staggerChildren: 0.2,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-            >
-              <h5 className="text-[28px] md:text-[55px] font-medium font-poppins mb-[17px] text-center md:text-left">
-                One Mobile App For Your Lovely Pet
-              </h5>
-              <p className="font-normal font-poppins text-[16px] md:text-[19px] text-black w-full md:w-[103%] text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur. Magna dictumst mattis
-                tempus ac dignissim ultricies. Sodales tellus egestas ac viverra
-                mauris enim bibendum commodo aliquam. Elementum et est semper
-                faucibus imperdiet urna at sagittis. Nunc sit pellentesque in
-                odio ultrices volutpat nunc nec lacus. Sed orci faucibus.
-              </p>
-              <h6 className="mt-16 font-poppins font-semibold text-[26px] md:text-[30px] text-nav">
-                Download The App
-              </h6>
+          <div className="hidden md:block">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] ">
+              <motion.div
+                initial={{ x: -60, opacity: 0 }}
+                whileInView={{ x: -0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  staggerChildren: 0.2,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+              >
+                <h5 className="text-[28px] md:text-[55px] font-medium font-poppins mb-[17px] text-center md:text-left">
+                  One Mobile App For Your Lovely Pet
+                </h5>
+                <p className="font-normal font-poppins text-[16px] md:text-[19px] text-black w-full md:w-[103%] text-center md:text-left">
+                  Lorem ipsum dolor sit amet consectetur. Magna dictumst mattis
+                  tempus ac dignissim ultricies. Sodales tellus egestas ac
+                  viverra mauris enim bibendum commodo aliquam. Elementum et est
+                  semper faucibus imperdiet urna at sagittis. Nunc sit
+                  pellentesque in odio ultrices volutpat nunc nec lacus. Sed
+                  orci faucibus.
+                </p>
+                <h6 className="mt-16 font-poppins font-semibold text-[26px] md:text-[30px] text-nav">
+                  Download The App
+                </h6>
 
-              <div className="md:flex gap-4 mt-[50px] mb-0 text-center md:text-left">
+                <div className="md:flex gap-4 mt-[50px] mb-0 text-center md:text-left">
+                  <Button className="mb-4 bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
+                    <img src={Appstore} alt="" className="w-[140px] h-[27px]" />
+                  </Button>
+                  <Button className="bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
+                    <img src={Plystore} alt="" className="w-[106px] h-[28px]" />
+                  </Button>
+                </div>
+              </motion.div>
+              <motion.div
+                className=" relative h-full"
+                initial="hidden"
+                whileInView="visible"
+                variants={Animation}
+                viewport={{ once: true }}
+                transition={{
+                  staggerChildren: 0.2,
+                  duration: 1,
+                  ease: "easeInOut",
+                }}
+              >
+                <motion.div
+                  animate={animationControlFirst}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                  }}
+                >
+                  <img src={PhoneImg2} alt="" className=" " />
+                </motion.div>
+
+                <motion.div
+                  className="absolute left-[170px] top-[40px]"
+                  animate={animationControlSecond}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                  }}
+                >
+                  <img src={PhoneImg1} alt="" className=" " />
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+
+          <div className="md:hidden block">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] ">
+              <div>
+                <h5 className="text-[28px] md:text-[55px] font-medium font-poppins mb-[17px] text-center md:text-left">
+                  One Mobile App For Your Lovely Pet
+                </h5>
+                <p className="font-normal font-poppins text-[16px] md:text-[19px] text-black w-full md:w-[103%] text-center md:text-left">
+                  Lorem ipsum dolor sit amet consectetur. Magna dictumst mattis
+                  tempus ac dignissim ultricies. Sodales tellus egestas ac
+                  viverra mauris enim bibendum commodo aliquam. Elementum et est
+                  semper faucibus imperdiet urna at sagittis. Nunc sit
+                  pellentesque in odio ultrices volutpat nunc nec lacus. Sed
+                  orci faucibus.
+                </p>
+                <h6 className="mt-16 font-poppins font-semibold text-[26px] md:text-[30px] text-nav">
+                  Download The App
+                </h6>
+              </div>
+              <div className=" mt-10 relative">
+                <div className=" ">
+                  <img
+                    src={PhoneImg2}
+                    alt=""
+                    className=" w-[160px] h-[300px]"
+                  />
+                </div>
+
+                <div className="">
+                  <img
+                    src={PhoneImg1}
+                    alt=""
+                    className="w-[160px] h-[300px] absolute left-[80px] top-[30px]"
+                  />
+                </div>
+              </div>
+
+              <div className="md:flex gap-4 mt-[80px] mb-0 text-center md:text-left">
                 <Button className="mb-4 bg-white px-[30px] py-[23px] rounded-full drop-shadow-2xl drop-shadow-[rgba(0,0,0,0.14)] hover:bg-white">
                   <img src={Appstore} alt="" className="w-[140px] h-[27px]" />
                 </Button>
@@ -83,40 +166,7 @@ const DownloadApp = () => {
                   <img src={Plystore} alt="" className="w-[106px] h-[28px]" />
                 </Button>
               </div>
-            </motion.div>
-            <motion.div
-              className=" relative"
-              initial="hidden"
-              whileInView="visible"
-              variants={Animation}
-              viewport={{ once: true }}
-              transition={{
-                staggerChildren: 0.2,
-                duration: 1,
-                ease: "easeInOut",
-              }}
-            >
-              <motion.div
-                animate={animationControlFirst}
-                transition={{
-                  type: "spring",
-                  stiffness: 500,
-                }}
-              >
-                <img src={PhoneImg2} alt="" className="hidden xl:block" />
-              </motion.div>
-
-              <motion.div
-                className="absolute left-[170px] top-[40px]"
-                animate={animationControlSecond}
-                transition={{
-                  type: "spring",
-                  stiffness: 500,
-                }}
-              >
-                <img src={PhoneImg1} alt="" className="hidden xl:block" />
-              </motion.div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </GlobalContainer>
